@@ -2,24 +2,25 @@ package com.modulardemo;
 
 
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
+
+import com.modulardemo.model.BaseItem;
 
 import java.util.List;
 
 public class MyRecycleAdapter extends RecyclerView.Adapter<MyRecycleViewHolder> {
 
     private List<BaseItem> items;
+    private List<ViewProvider> viewProviders;
 
-    public MyRecycleAdapter(List<BaseItem> items) {
+    public MyRecycleAdapter(List<BaseItem> items, List<ViewProvider> viewProvider) {
         this.items = items;
+        this.viewProviders = viewProvider;
     }
 
     @Override
     public MyRecycleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item1, parent, false);
-        return new MyRecycleViewHolder(view);
+        return viewProviders.get(viewType).providerView(parent);
     }
 
     @Override
@@ -30,5 +31,15 @@ public class MyRecycleAdapter extends RecyclerView.Adapter<MyRecycleViewHolder> 
     @Override
     public int getItemCount() {
         return items == null ? 0 : items.size();
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        for (int i = 0; i < viewProviders.size(); i++) {
+            if (items.get(position).getType().equals(viewProviders.get(i).getType())) {
+                return i;
+            }
+        }
+        return -1;
     }
 }
