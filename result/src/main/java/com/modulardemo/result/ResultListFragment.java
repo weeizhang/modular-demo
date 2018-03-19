@@ -10,17 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.modulardemo.result.model.Type1Item;
-import com.modulardemo.result.model.Type2Item;
-import com.modulardemo.result.model.Type3Item;
+import com.modulardemo.resultsdk.BaseItem;
 import com.modulardemo.resultsdk.ViewProvider;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class ResultListFragment extends Fragment {
     private RecyclerView myRecycleView;
     private MyRecycleAdapter myRecycleAdapter;
+    private List<ViewProvider> viewProviders;
+    private List<BaseItem> items;
 
     @Nullable
     @Override
@@ -34,24 +33,20 @@ public class ResultListFragment extends Fragment {
         initView(view);
     }
 
+    public void init(List<ViewProvider> viewProviders, List<BaseItem> items) {
+        this.viewProviders = viewProviders;
+        this.items = items;
+    }
+
     private void initView(View view) {
         myRecycleView = view.findViewById(R.id.my_recycle_view);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this.getContext());
         myRecycleView.setLayoutManager(layoutManager);
 
-        List<ViewProvider> viewProviders = Arrays.asList(
-                new Type1ViewProvider("Type 1"),
-                new Type2ViewProvider("Type 2"),
-                new Type3ViewProvider("Type 3"));
-        myRecycleAdapter = new MyRecycleAdapter(
-                Arrays.asList(
-                        new Type1Item("Type 1"),
-                        new Type2Item("Type 2"),
-                        new Type3Item("Type 3"),
-                        new Type2Item("Type 2"),
-                        new Type1Item("Type 1")),
-                viewProviders);
+        myRecycleAdapter = new MyRecycleAdapter();
+        myRecycleAdapter.registerViewProvider(viewProviders);
+        myRecycleAdapter.setItems(items);
         myRecycleView.setAdapter(myRecycleAdapter);
     }
 }

@@ -1,4 +1,4 @@
-package com.modulardemo.result.model;
+package com.modulardemo.feature.model;
 
 
 import com.modulardemo.resultsdk.BaseItem;

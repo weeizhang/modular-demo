@@ -1,4 +1,4 @@
-package com.modulardemo.result;
+package com.modulardemo.feature;
 
 
 import android.view.LayoutInflater;
@@ -7,14 +7,14 @@ import android.view.ViewGroup;
 
 import com.modulardemo.resultsdk.ViewProvider;
 
-public class Type3ViewProvider extends ViewProvider {
-    public Type3ViewProvider(String type) {
+public class Type1ViewProvider extends ViewProvider {
+    public Type1ViewProvider(String type) {
         super(type);
     }
 
     @Override
     public MyRecycleViewHolder providerView(ViewGroup parent) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item3, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item1, parent, false);
         return new MyRecycleViewHolder(view);
     }
 }

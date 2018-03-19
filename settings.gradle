@@ -1,1 +1,1 @@
-include ':app', ':result', ':result-sdk'
+include ':app', ':result', ':result-sdk', ':feature'

@@ -15,9 +15,12 @@ public class MyRecycleAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder
     private List<BaseItem> items;
     private List<ViewProvider> viewProviders;
 
-    public MyRecycleAdapter(List<BaseItem> items, List<ViewProvider> viewProvider) {
+    public void registerViewProvider(List<ViewProvider> viewProviders) {
+        this.viewProviders = viewProviders;
+    }
+
+    public void setItems(List<BaseItem> items) {
         this.items = items;
-        this.viewProviders = viewProvider;
     }
 
     @Override

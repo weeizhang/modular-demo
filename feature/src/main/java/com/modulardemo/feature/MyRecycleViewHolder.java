@@ -1,4 +1,4 @@
-package com.modulardemo.result;
+package com.modulardemo.feature;
 
 
 import android.view.View;
