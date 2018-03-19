@@ -1,4 +1,4 @@
-package com.modulardemo.result.model;
+package com.modulardemo.resultsdk;
 
 
 public class BaseItem {

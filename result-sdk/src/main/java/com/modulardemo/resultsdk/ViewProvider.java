@@ -1,4 +1,4 @@
-package com.modulardemo.result;
+package com.modulardemo.resultsdk;
 
 
 import android.view.ViewGroup;
@@ -14,5 +14,5 @@ public abstract class ViewProvider {
         return type;
     }
 
-    public abstract MyRecycleViewHolder providerView(ViewGroup parent);
+    public abstract BaseRecycleViewHolder providerView(ViewGroup parent);
 }

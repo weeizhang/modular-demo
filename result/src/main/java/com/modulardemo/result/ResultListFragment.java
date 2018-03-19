@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import com.modulardemo.result.model.Type1Item;
 import com.modulardemo.result.model.Type2Item;
 import com.modulardemo.result.model.Type3Item;
+import com.modulardemo.resultsdk.ViewProvider;
 
 import java.util.Arrays;
 import java.util.List;

@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.modulardemo.resultsdk.ViewProvider;
+
 public class Type2ViewProvider extends ViewProvider {
     public Type2ViewProvider(String type) {
         super(type);

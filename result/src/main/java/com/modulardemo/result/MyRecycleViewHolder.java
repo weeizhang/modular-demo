@@ -1,14 +1,14 @@
 package com.modulardemo.result;
 
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.modulardemo.result.model.BaseItem;
+import com.modulardemo.resultsdk.BaseItem;
+import com.modulardemo.resultsdk.BaseRecycleViewHolder;
 
 
-public class MyRecycleViewHolder extends RecyclerView.ViewHolder {
+public class MyRecycleViewHolder extends BaseRecycleViewHolder {
 
     private TextView textView;
 
@@ -17,6 +17,7 @@ public class MyRecycleViewHolder extends RecyclerView.ViewHolder {
         textView = itemView.findViewById(R.id.my_text_view);
     }
 
+    @Override
     public void populate(BaseItem item) {
         textView.setText(item.getType());
     }

@@ -4,12 +4,13 @@ package com.modulardemo.result;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
-
-import com.modulardemo.result.model.BaseItem;
+import com.modulardemo.resultsdk.BaseItem;
+import com.modulardemo.resultsdk.BaseRecycleViewHolder;
+import com.modulardemo.resultsdk.ViewProvider;
 
 import java.util.List;
 
-public class MyRecycleAdapter extends RecyclerView.Adapter<MyRecycleViewHolder> {
+public class MyRecycleAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder> {
 
     private List<BaseItem> items;
     private List<ViewProvider> viewProviders;
@@ -20,12 +21,12 @@ public class MyRecycleAdapter extends RecyclerView.Adapter<MyRecycleViewHolder> 
     }
 
     @Override
-    public MyRecycleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BaseRecycleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return viewProviders.get(viewType).providerView(parent);
     }
 
     @Override
-    public void onBindViewHolder(MyRecycleViewHolder holder, int position) {
+    public void onBindViewHolder(BaseRecycleViewHolder holder, int position) {
         holder.populate(items.get(position));
     }
 
