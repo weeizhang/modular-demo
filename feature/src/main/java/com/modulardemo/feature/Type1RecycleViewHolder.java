@@ -4,7 +4,7 @@ package com.modulardemo.feature;
 import android.view.View;
 import android.widget.TextView;
 
-import com.modulardemo.resultsdk.BaseItem;
+import com.modulardemo.common.model.BaseItem;
 import com.modulardemo.resultsdk.BaseRecycleViewHolder;
 
 

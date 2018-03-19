@@ -1,7 +1,5 @@
-package com.modulardemo.feature.model;
+package com.modulardemo.common.model;
 
-
-import com.modulardemo.resultsdk.BaseItem;
 
 public class Type3Item extends BaseItem {
     public Type3Item(String type) {

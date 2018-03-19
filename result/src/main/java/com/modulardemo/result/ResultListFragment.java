@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.modulardemo.resultsdk.BaseItem;
+import com.modulardemo.common.model.BaseItem;
 import com.modulardemo.resultsdk.ViewProvider;
 
 import java.util.List;

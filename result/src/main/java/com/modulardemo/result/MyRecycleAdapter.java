@@ -4,7 +4,7 @@ package com.modulardemo.result;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
-import com.modulardemo.resultsdk.BaseItem;
+import com.modulardemo.common.model.BaseItem;
 import com.modulardemo.resultsdk.BaseRecycleViewHolder;
 import com.modulardemo.resultsdk.ViewProvider;
 
