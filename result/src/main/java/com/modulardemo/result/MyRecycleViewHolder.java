@@ -1,11 +1,12 @@
-package com.modulardemo;
+package com.modulardemo.result;
 
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.modulardemo.model.BaseItem;
+import com.modulardemo.result.model.BaseItem;
+
 
 public class MyRecycleViewHolder extends RecyclerView.ViewHolder {
 

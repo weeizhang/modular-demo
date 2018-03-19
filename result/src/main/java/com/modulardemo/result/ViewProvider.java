@@ -1,4 +1,4 @@
-package com.modulardemo;
+package com.modulardemo.result;
 
 
 import android.view.ViewGroup;
