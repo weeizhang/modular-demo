@@ -8,11 +8,11 @@ import com.modulardemo.resultsdk.BaseItem;
 import com.modulardemo.resultsdk.BaseRecycleViewHolder;
 
 
-public class MyRecycleViewHolder extends BaseRecycleViewHolder {
+public class Type1RecycleViewHolder extends BaseRecycleViewHolder {
 
     private TextView textView;
 
-    public MyRecycleViewHolder(View itemView) {
+    public Type1RecycleViewHolder(View itemView) {
         super(itemView);
         textView = itemView.findViewById(R.id.my_text_view);
     }

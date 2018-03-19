@@ -13,8 +13,8 @@ public class Type1ViewProvider extends ViewProvider {
     }
 
     @Override
-    public MyRecycleViewHolder providerView(ViewGroup parent) {
+    public Type1RecycleViewHolder providerView(ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item1, parent, false);
-        return new MyRecycleViewHolder(view);
+        return new Type1RecycleViewHolder(view);
     }
 }
