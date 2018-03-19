@@ -21,6 +21,7 @@ public class MyRecycleAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder
 
     public void setItems(List<BaseItem> items) {
         this.items = items;
+        notifyDataSetChanged();
     }
 
     @Override

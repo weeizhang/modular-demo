@@ -4,6 +4,9 @@ package com.modulardemo.common.model;
 public class Type2Item extends BaseItem {
     private Title title;
 
+    public Type2Item() {
+    }
+
     public Type2Item(String type, Title title) {
         super(type);
         this.title = title;

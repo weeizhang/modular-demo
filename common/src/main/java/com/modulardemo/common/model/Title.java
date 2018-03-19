@@ -5,6 +5,9 @@ public class Title {
     private String title;
     private String subTitle;
 
+    public Title() {
+    }
+
     public Title(String title, String subTitle) {
         this.title = title;
         this.subTitle = subTitle;

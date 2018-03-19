@@ -3,10 +3,6 @@ package com.modulardemo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.modulardemo.common.model.Title;
-import com.modulardemo.common.model.Type1Item;
-import com.modulardemo.common.model.Type2Item;
-import com.modulardemo.common.model.Type3Item;
 import com.modulardemo.feature.Type1ViewProvider;
 import com.modulardemo.feature.Type2ViewProvider;
 import com.modulardemo.feature.Type3ViewProvider;
@@ -26,12 +22,8 @@ public class MainActivity extends AppCompatActivity {
                         new Type1ViewProvider("Type 1"),
                         new Type2ViewProvider("Type 2"),
                         new Type3ViewProvider("Type 3")),
-                Arrays.asList(
-                        new Type1Item("Type 1"),
-                        new Type2Item("Type 2", new Title("Title 1", "SubTitle 1")),
-                        new Type3Item("Type 3"),
-                        new Type2Item("Type 2", new Title("Title 2", "SubTitle 2")),
-                        new Type1Item("Type 1")));
+                new NetworkUtil()
+        );
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.layout_content, resultListFragment)
                 .commit();
